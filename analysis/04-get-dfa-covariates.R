@@ -117,7 +117,7 @@ pp <- spatial_average(bccm_surface_temperature(), area = area)
 saveRDS(pp, "data-raw/cw_surface_temperature.rds")
 
 # oisst_month
-load("~/github/dfo/gfcondition/data-raw/oisst_month_grid26.rda")
+load("data-raw/oisst_month_grid26.rda")
 pp <- spatial_average(oisst_month_grid26, area = area)
 saveRDS(pp, "data-raw/cw_surface_temperature_oi.rds")
 
