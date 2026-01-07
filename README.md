@@ -3,7 +3,9 @@
 This repository contains code used to generate sex and maturity specific indices 
 of average body condition and associated density distributions for species 
 frequently sampled by Canadian Pacific bottom trawl surveys. Common trends in 
-body condition indices were then identified and compared with environmental 
+body condition indices were then identified using a Bayesian Dynamic Factor 
+Analysis implemented with the bayesdfa R package 
+(<https://fate-ewi.github.io/bayesdfa/>) and compared with environmental 
 indices available in the PACEA R package (<https://github.com/pbs-assess/pacea>).
 
 These analyses are described in:
