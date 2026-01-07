@@ -2,7 +2,9 @@
 
 This repository contains code used to generate sex and maturity specific indices 
 of average body condition and associated density distributions for species 
-frequently sampled by Canadian Pacific bottom trawl surveys. 
+frequently sampled by Canadian Pacific bottom trawl surveys. Common trends in 
+body condition indices were then identified and compared with environmental 
+indices available in the PACEA R package (<https://github.com/pbs-assess/pacea>).
 
 These analyses are described in:
 
@@ -20,6 +22,9 @@ sourced by other files, or contain the original
 data retrieval and processing steps used to generate the data files provided.
 - Scripts without numbers (`x-`) are for plotting, supplementary tests, 
 or summary statistic, and may need to be run after the main analysis is complete.
+<!-- - The sea surface temperature variable from PACEA was reformatted to match the other
+spatial variables using the method in `xx-get-oisst.R` the output from which is provided 
+in `data-raw/oisst_month_grid26.rda`.-->
 - Script `05-dfa.R` can be run repeatedly for each sex and maturity class (e.g., 
 `set_group <- "mature males"`) and with and without using condition indices where the 
 estimated effects of density-dependence have been removed from the estimated annual 
