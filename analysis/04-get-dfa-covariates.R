@@ -1,6 +1,5 @@
-# get roms covariates from pacea-data-main and using their spatial_average function
-# updated here with a default polygon for whole outer coast because I couldn't install the package
-# remotes::install_github("pbs-assess/pacea") ## not working so retrieved files from github
+# get roms covariates using a spatial_average function updated here with a default polygon for whole outer coast
+# remotes::install_github("pbs-assess/pacea") ## if not working files can be retrieved from github
 library(pacea)
 library(tidyverse)
 
@@ -84,12 +83,6 @@ ggplot(area_xy, aes(X, Y)) +
 
 ggsave("figs/bccm-area.png", width = 3, height = 3)
 
-# area_sf <- sf::st_sfc(sf::st_polygon(area),
-#                       crs = 4326) %>%
-#   sf::st_as_sf() %>%
-#   sf::st_transform(crs = 3005)
-#
-# plot(area_sf)
 
 # load("../pacea-data-main/data/bccm_primaryproduction_01.rds")
 # pp <- spatial_average(bccm_primaryproduction, area = area)
@@ -120,15 +113,3 @@ saveRDS(pp, "data-raw/cw_surface_temperature.rds")
 load("data-raw/oisst_month_grid26.rda")
 pp <- spatial_average(oisst_month_grid26, area = area)
 saveRDS(pp, "data-raw/cw_surface_temperature_oi.rds")
-
-
-# pacea_long <- function(data, names_to = "date", values_to = "value") {
-#
-#   dat <- data %>%
-#     tidyr::pivot_longer(cols = !last_col(), cols_vary = "slowest", names_to = names_to, values_to = values_to)  %>%
-#     mutate(year = as.numeric(substr(get(names_to), 1, 4)),
-#            month = as.numeric(substr(get(names_to), 6, 7))) %>%
-#     dplyr::select(year, month, value, geometry)
-#
-#   return(dat)
-# }
