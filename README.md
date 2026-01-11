@@ -1,6 +1,6 @@
 ## gfcondition: Annual indices of average groundfish body condition 
 
-[![DOI](https://zenodo.org/badge/18211383.svg)](https://zenodo.org/badge/latestdoi/18211383)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18211383.svg)](https://doi.org/10.5281/zenodo.18211383)
 
 This repository contains code used to generate sex and maturity specific indices 
 of average body condition and associated density distributions for species 
