@@ -1,5 +1,7 @@
 ## gfcondition: Annual indices of average groundfish body condition 
 
+[![DOI](https://zenodo.org/badge/18211383.svg)](https://zenodo.org/badge/latestdoi/18211383)
+
 This repository contains code used to generate sex and maturity specific indices 
 of average body condition and associated density distributions for species 
 frequently sampled by Canadian Pacific bottom trawl surveys. Common trends in 
